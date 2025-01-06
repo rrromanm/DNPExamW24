@@ -1,0 +1,48 @@
+﻿@page "/ViewDogs"
+@using Blazor.Model
+@using Blazor.Service
+@inject IKennelService DogService
+
+<h3>ViewDogs</h3>
+
+<DogsSexCount/>
+
+<ul>
+    @foreach (var dog in dogs)
+    {
+        <li @onclick="(() => ShowDetails(dog))" style="cursor: pointer;">
+            <div>
+                <img src="@dog.ImageUrl" alt="@dog.Name" style="width: 100px; height: 100px"/>
+                <h4>@dog.Name</h4>
+            </div>
+        </li>
+    }
+</ul>
+
+@if (selectedDog != null)
+{
+    <h4>Details</h4>
+    <p>Name: @selectedDog.Name</p>
+    <p>Sex: @selectedDog.Sex</p>
+    <p>Breed: @selectedDog.Breed</p>
+    <p>Description: @selectedDog.Description</p>
+    <p>Arrival Date: @selectedDog.ArrivalDate.ToShortDateString()</p>
+}
+
+@code {
+    private List<Dog> dogs = new List<Dog>();
+    private Dog selectedDog;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var entries = await DogService.GetDogs();
+        dogs = entries.OrderBy(d => d.ArrivalDate).ToList();
+    }
+
+    public void ShowDetails(Dog dog)
+    {
+        Console.WriteLine($"ShowDetails called with: {dog.Name}");
+        selectedDog = dog;
+        StateHasChanged();
+    }
+}

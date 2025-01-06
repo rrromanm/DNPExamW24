@@ -1,0 +1,24 @@
+﻿@using Blazor.Model
+@using Blazor.Service
+@inject IKennelService DogService
+
+<h3>DogsSexCount</h3>
+
+<ul>
+    @foreach (var item in sexCount)
+    {
+        <li>@item.Key: @item.Value</li>
+    }
+</ul>
+
+@code {
+    private List<Dog> dogs = new List<Dog>();
+    private Dictionary<string, int> sexCount = new ();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        var entries = await DogService.GetDogs();
+        dogs = entries.OrderBy(d => d.ArrivalDate).ToList();
+        sexCount = dogs.GroupBy(d => d.Sex).ToDictionary(g => g.Key, g => g.Count());
+    }
+}

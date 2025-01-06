@@ -1,0 +1,49 @@
+﻿@page "/RegisterDog"
+@using Blazor.Model
+@using Blazor.Service
+@inject IKennelService kennelService
+
+<h3>RegisterDog</h3>
+
+<EditForm Model="entry" OnValidSubmit="Submit" FormName="DogEntry">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <InputText id="Name" class="form-control" @bind-Value="entry.Name" />
+    </div>
+    <div class="form-group">
+        <label for="sex">Choose sex:</label>
+        
+        <select name="sex" id="sex" @bind="entry.Sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Breed">Breed</label>
+        <InputText id="Breed" class="form-control" @bind-Value="entry.Breed" />
+    </div>
+    <div class="form-group">
+        <label for="ImageUrl">ImageUrl</label>
+        <InputText id="ImageUrl" class="form-control" @bind-Value="entry.ImageUrl" />
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <InputText id="Description" class="form-control" @bind-Value="entry.Description" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    @if (message != null)
+    {
+        <p>@message</p>
+    }
+</EditForm>
+
+@code {
+    private Dog entry = new Dog();
+    private string? message;
+
+    public async void Submit()
+    {
+        await kennelService.AddDog(entry);
+        message = "Dog added";
+    }
+}
