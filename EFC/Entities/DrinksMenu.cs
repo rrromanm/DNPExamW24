@@ -5,21 +5,27 @@ namespace EFC.Entities;
 public class DrinksMenu
 {
     [Key] public int Id { get; set; }
-    public string Name { get; set; }
-    public bool ContainsAlcohol { get; set; }
+    public string Name { get; set; } = null!;
+    public bool containsAlcohol { get; set; }
     public TimeOnly AvailableFrom { get; set; }
 
-    public ICollection<Drinks> Drinks { get; set; } = new List<Drinks>();
-    
+    public List<Drink> Drinks { get; set; } = [];
+
     private DrinksMenu()
     {
         
     }
     
-    public DrinksMenu(string name, bool containsAlcohol, TimeOnly availableFroM)
+    public DrinksMenu (string Name, bool alc, TimeOnly availableFrom)
     {
-        Name = name;
-        ContainsAlcohol = containsAlcohol;
-        AvailableFrom = availableFroM;
+        this.Name = Name;
+        containsAlcohol = alc;
+        AvailableFrom = availableFrom;
+        Drinks = new List<Drink>();
+    }
+    
+    public override string ToString()
+    {
+        return $"Name: {Name}, Contains Alcohol: {containsAlcohol}, Available From: {AvailableFrom}, Total Price: {Drinks.Sum(p => p.Price)}";
     }
 }

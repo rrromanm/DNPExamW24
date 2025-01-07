@@ -1,18 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\Blazor\\Blazor.csproj": {}
+    "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\Blazor\\Blazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\Blazor\\Blazor.csproj": {
+    "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\Blazor\\Blazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\Blazor\\Blazor.csproj",
+        "projectUniqueName": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\Blazor\\Blazor.csproj",
         "projectName": "Blazor",
-        "projectPath": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\Blazor\\Blazor.csproj",
+        "projectPath": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\Blazor\\Blazor.csproj",
         "packagesPath": "C:\\Users\\romam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\Blazor\\obj\\",
+        "outputPath": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\Blazor\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\romam\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],

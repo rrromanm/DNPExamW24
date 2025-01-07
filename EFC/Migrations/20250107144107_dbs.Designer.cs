@@ -3,6 +3,7 @@ using System;
 using EFC.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFC.Migrations
 {
     [DbContext(typeof(MenuContext))]
-    partial class MenuContextModelSnapshot : ModelSnapshot
+    [Migration("20250107144107_dbs")]
+    partial class dbs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
@@ -28,15 +31,15 @@ namespace EFC.Migrations
                     b.Property<bool>("IncludesUmbrella")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("MenuId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<double>("Price")
                         .HasColumnType("REAL");
 
+                    b.Property<int>("menuId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Name");
 
-                    b.HasIndex("MenuId");
+                    b.HasIndex("menuId");
 
                     b.ToTable("Drinks");
                 });
@@ -47,7 +50,7 @@ namespace EFC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<TimeOnly>("AvailableFrom")
+                    b.Property<TimeSpan>("AvailableFrom")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -66,7 +69,7 @@ namespace EFC.Migrations
                 {
                     b.HasOne("EFC.Entities.DrinksMenu", "Menu")
                         .WithMany("Drinks")
-                        .HasForeignKey("MenuId")
+                        .HasForeignKey("menuId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

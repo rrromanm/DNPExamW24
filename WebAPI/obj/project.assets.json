@@ -433,12 +433,13 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\romam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "C:\\Users\\romam\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],

@@ -1,18 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\EFC\\EFC.csproj": {}
+    "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\EFC\\EFC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\EFC\\EFC.csproj": {
+    "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\EFC\\EFC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\EFC\\EFC.csproj",
+        "projectUniqueName": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\EFC\\EFC.csproj",
         "projectName": "EFC",
-        "projectPath": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\EFC\\EFC.csproj",
+        "projectPath": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\EFC\\EFC.csproj",
         "packagesPath": "C:\\Users\\romam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\romam\\RiderProjects\\DNPExamW24\\EFC\\obj\\",
+        "outputPath": "C:\\Users\\romam\\OneDrive - ViaUC\\Documents\\DNPExamW24\\EFC\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\romam\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
